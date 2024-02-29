@@ -3,6 +3,7 @@ import connectToMongo from './config/db.js';
 import cors from 'cors'
 import routes from './routes/TodoRoute.js'
 import path from 'path';
+const __dirname=path.resolve();
 const app = express();
 app.use(express.json());
 app.use(express.static(path.join(__dirname,"..","client/build")));
