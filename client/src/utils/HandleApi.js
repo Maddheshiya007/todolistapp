@@ -1,12 +1,11 @@
 import axios from 'axios'
 
 
-const baseUrl = `${process.env.REACT_APP_BASE_URL}`
+// const baseUrl = `${process.env.REACT_APP_BASE_URL}`
+const baseUrl = `http://localhost:8000`;
 
 const getAllToDo = (setToDo) => {
-    axios
-        .get(baseUrl)
-        .then(({ data }) => {
+    axios.get(baseUrl).then(({ data }) => {
             console.log('data ---> ', data);
             setToDo(data)
         })
